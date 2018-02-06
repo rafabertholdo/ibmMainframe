@@ -1,0 +1,4 @@
+ceda def mapset(screen1) group(rafaelgb)
+ceda ins mapset(screen1) group(rafaelgb)
+ceci send map(screen1)
+cesf logoff
