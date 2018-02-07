@@ -1,0 +1,76 @@
+S SHUTDOWN
+$P JES2,ABEND
+$P JES2,ABEND,FORCE
+Z EOD
+QUIESCE
+
+D A,L - list active tasks
+D A,TASKNAME 
+D A,ALL
+D J,JOBNAME - list detailed information about batch jobname
+D TS,L - list users
+D TS,USERNAME
+D TS,ALL
+
+D IPLINFO
+D PARMLIB - system libraies
+D PROG,LNKLST - path
+D PROG,APF - authorizedf or restricted program execution
+
+D OMVS,A=ALL - list all USS processes
+D OMVS,O - list USS options
+D OMVS,LIMITS - list USS thresholds
+D OMVS,F - list USS mounted filesystems
+
+DEVSERV QD,TYPE=ALL - list all DASD devices
+
+D TCPIP,,NETSTAT,HOME
+D TCPIP,,NETSTAT,DEVICE
+D TCPIP,,NETSTAT,BYTE
+D NET,APPLS
+D NET,MAJNODES
+D NET,TRL
+D NET,STATIONS
+D NET,PENDING
+
+D R,L - response list
+D T - time
+D C,K - list usefull operator console commands
+D IKJTSO,ALL - list TSO/E parameter segttings
+D OPDATA - list command recognition characters
+D SYMBOLS
+D SMF - system management facility
+D SSI - subsistem information
+D WLM,APPLENV=* - workload manager application
+
+MODIFY(F)
+
+.TSO
+F TCAS,USERMAX=#
+.catalog
+F CATALOG,OPEN
+
+VARY(V)
+START(S)
+STOP(P)
+
+
+JES2
+
+$A - release held jobs
+$C - cancel jobname
+$E - reset jes resource
+$JDDETAILS
+$JDMONITOR
+$JDSTATUS
+$JSTOP - terminate monitor address space
+$L - list output
+$P - stop or puge any further processing of jes2 controlled resource
+$S - start jed 2
+$VS - enter mvs command
+$D SPL - spool
+$D A - active jobs
+$D I - initiator information 
+$T A,ALL - all information about all active jes2 active commands
+
+/c ftpserve
