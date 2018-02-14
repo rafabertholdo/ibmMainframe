@@ -5,7 +5,7 @@
 //* COMPILE THE MAPSET JCL
 //*------------------------------------------------------------
 //*
-// SET SRCELIB=RAFAELGB.PROGS.CICS
+// SET SRCELIB=RAFAELGB.PROGS.BMS
 // SET LOADLIB=DFH320.CICS.SDFHLOAD
 // SET DSECTLIB=DFH320.CICS.SDFHMAC
 //*
