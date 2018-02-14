@@ -1,4 +1,11 @@
 ceda def mapset(screen1) group(rafaelgb)
 ceda ins mapset(screen1) group(rafaelgb)
 ceci send map(screen1)
-cesf logoff
+cesn - sign on
+cesf - sign off
+
+CEDA DEF PROG(ACCEPT) GROUP(RAFAELGB) LANG(COBOL)
+CEDA DEFINE LIBRARY(RLOADLIB) GROUP(RAFAELGB) 
+DSNAME01(RAFAELGB.PROGS.LOADLIB)
+CEDA DEF TRANS(RBAC) GROUP(RAFAELGB) PROG(ACCEPT)
+CEDA INSTALL GROUP(RAFAELGB)
